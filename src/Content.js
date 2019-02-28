@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {debounce} from 'lodash';
+import React from 'react'
+import PropTypes from 'prop-types'
+import {debounce} from 'lodash'
 
 export default class Content extends React.Component {
   static propTypes = {
     prefixCls: PropTypes.string,
     overlay: PropTypes.oneOfType([
       PropTypes.node,
-      PropTypes.func,
+      PropTypes.func
     ]).isRequired,
     id: PropTypes.string,
-    trigger: PropTypes.any,
+    trigger: PropTypes.any
   }
 
   popupAlign = debounce(() => {
@@ -25,11 +25,11 @@ export default class Content extends React.Component {
   }
 
   render() {
-    const { overlay, prefixCls, id } = this.props;
+    const { overlay, prefixCls, id } = this.props
     return (
       <div className={`${prefixCls}-inner`} id={id} role="tooltip">
         {typeof overlay === 'function' ? overlay() : overlay}
       </div>
-    );
+    )
   }
 }
