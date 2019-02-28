@@ -9,9 +9,7 @@
     "tooltip"
   ],
   "files": [
-    "dist",
-    "lib",
-    "es",
+    "src",
     "assets/*.css"
   ],
   "main": "lib/index",
