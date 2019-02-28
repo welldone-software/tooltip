@@ -12,8 +12,8 @@
     "src",
     "assets/*.css"
   ],
-  "main": "lib/index",
-  "module": "es/index",
+  "main": "src/index",
+  "module": "src/index",
   "homepage": "http://github.com/react-component/tooltip",
   "maintainers": [
     "yiminghe@gmail.com"
