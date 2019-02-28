@@ -1,6 +1,11 @@
 # rc-tooltip
 ---
 
+## Disclaimer
+this fork aimed to fix the reflow problem for tooltip inside heavy react app
+https://github.com/react-component/tooltip/issues/169
+
+
 React Tooltip
 
 [![NPM version][npm-image]][npm-url]
