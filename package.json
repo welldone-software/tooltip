@@ -10,7 +10,7 @@
   ],
   "files": [
     "src",
-    "assets/*.css"
+    "assets"
   ],
   "main": "src/index",
   "module": "src/index",
