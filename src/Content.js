@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {debounce} from 'lodash';
 
 export default class Content extends React.Component {
   static propTypes = {
@@ -12,11 +13,15 @@ export default class Content extends React.Component {
     trigger: PropTypes.any,
   }
 
-  componentDidUpdate() {
-    const { trigger } = this.props;
+  popupAlign = debounce(() => {
+    const {trigger} = this.props
     if (trigger) {
-      trigger.forcePopupAlign();
+      trigger.forcePopupAlign()
     }
+  }, 50)
+
+  componentDidMount() {
+    this.popupAlign()
   }
 
   render() {
