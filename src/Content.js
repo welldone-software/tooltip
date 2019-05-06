@@ -10,7 +10,8 @@ export default class Content extends React.Component {
       PropTypes.func
     ]).isRequired,
     id: PropTypes.string,
-    trigger: PropTypes.any
+    trigger: PropTypes.any,
+    dataId: PropTypes.string
   }
 
   popupAlign = debounce(() => {
@@ -25,9 +26,9 @@ export default class Content extends React.Component {
   }
 
   render() {
-    const { overlay, prefixCls, id } = this.props
+    const { overlay, prefixCls, id, dataId } = this.props
     return (
-      <div className={`${prefixCls}-inner`} id={id} role="tooltip">
+      <div className={`${prefixCls}-inner`} dataId={dataId} id={id} role="tooltip">
         {typeof overlay === 'function' ? overlay() : overlay}
       </div>
     )

@@ -31,7 +31,8 @@ class Tooltip extends Component {
     destroyTooltipOnHide: PropTypes.bool,
     align: PropTypes.object,
     arrowContent: PropTypes.any,
-    id: PropTypes.string
+    id: PropTypes.string,
+    dataId: PropTypes.string
   }
 
   static defaultProps = {
@@ -46,7 +47,7 @@ class Tooltip extends Component {
   }
 
   getPopupElement = () => {
-    const { arrowContent, overlay, prefixCls, id } = this.props
+    const { arrowContent, overlay, prefixCls, id, dataId } = this.props
     return ([
       <div className={`${prefixCls}-arrow`} key="arrow">
         {arrowContent}
@@ -55,6 +56,7 @@ class Tooltip extends Component {
         key="content"
         trigger={this.trigger}
         prefixCls={prefixCls}
+        dataId={dataId}
         id={id}
         overlay={overlay}
       />
